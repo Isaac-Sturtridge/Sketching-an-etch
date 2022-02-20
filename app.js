@@ -17,9 +17,16 @@ function makeColumns(cellNum) {
         for(j = 0; j < cellNum; j++) {
             let cell = document.createElement("div");
             rows[j].appendChild(cell).className = "cell";
+            cell.addEventListener('mouseover', function ( event ) {
+                event.target.style.backgroundColor = "white";
+                event.target.style.border = "2px solid yellow"
+            })
         }
     }
 }
+
+
+
 
 function createGrid() {
     makeRows(16)
